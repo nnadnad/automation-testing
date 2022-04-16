@@ -22,7 +22,6 @@ public class FlightPage extends PageObject {
     public WebElementFacade allJakartaFlightOption;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]")
-//    @FindBy(linkText = "Padang, Indonesia")
     public WebElementFacade allPadangFlightOption;
 
     public void enterFromFlight() {

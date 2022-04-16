@@ -14,7 +14,7 @@ public class FlightPageSteps {
     HomePage homePage = new HomePage();
     FlightPage flightPage = new FlightPage();
 
-    @When("user choose location indonesia")
+    @When("user open traveloka app and choose location indonesia")
     public void userChooseLocationIndonesia() {
         landingPage.clickLocationField();
         landingPage.clickIndonesiaCountry();

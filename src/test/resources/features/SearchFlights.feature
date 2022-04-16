@@ -2,8 +2,7 @@
   Feature: As a user i want to search flight from Jakarta to Padang
 
     Scenario: User Search Flight from Jakarta to Padang
-#      Given user already on landing page and the title is "Hello! Welcome to Traveloka."
-      When user choose location indonesia
+      When user open traveloka app and choose location indonesia
       And user click continue onboard button
       And user click skip information landing button
       And user click skip for now in sign in page
