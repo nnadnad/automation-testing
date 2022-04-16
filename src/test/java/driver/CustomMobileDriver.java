@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.IOException;
 import java.net.URL;
 
-public class MobileDriver implements DriverSource {
+public class CustomMobileDriver implements DriverSource {
     @SneakyThrows
     @Override
     public WebDriver newDriver() {
@@ -26,6 +26,7 @@ public class MobileDriver implements DriverSource {
             capabilities.setCapability("appActivity", "com.traveloka.android.appentry.splash.SplashActivity");
             capabilities.setCapability("unicodeKeyboard", "true");
             capabilities.setCapability("resetKeyboard", "true");
+
             return new AndroidDriver(new URL(properties.getProperty("endpoint")), capabilities);
         } catch (IOException e) {
             throw new Error(e);

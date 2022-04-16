@@ -3,7 +3,7 @@
 
     Scenario: User Search Flight from Jakarta to Padang
 #      Given user already on landing page and the title is "Hello! Welcome to Traveloka."
-      And user choose location indonesia
+      When user choose location indonesia
       And user click continue onboard button
       And user click skip information landing button
       And user click skip for now in sign in page

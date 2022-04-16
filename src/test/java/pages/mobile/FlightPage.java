@@ -23,4 +23,34 @@ public class FlightPage extends PageObject {
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]")
     public WebElementFacade allPadangFlightOption;
+
+    public void enterFromFlight() {
+        fromFlightField.click();
+        waitABit(2000);
+    }
+
+    public void clickAllJKTFlight() {
+        allJakartaFlightOption.click();
+        waitABit(2000);
+    }
+
+    public void enterToFlight() {
+        toFlightField.click();
+        waitABit(2000);
+    }
+
+    public void searchFlightInput() {
+        searchFlightBox.sendKeys("Padang");
+        waitABit(2000);
+    }
+
+    public void clickAllPDGFlight() {
+        allPadangFlightOption.click();
+        waitABit(2000);
+    }
+
+    public void clickSearchFlightBtn() {
+        searchFlightBtn.click();
+        waitABit(3000);
+    }
 }
