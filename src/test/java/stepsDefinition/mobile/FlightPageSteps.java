@@ -59,6 +59,7 @@ public class FlightPageSteps {
     @And("user click all padang flight option")
     public void userClickAllPadangFlightOption() {
         flightPage.enterToFlight();
+        flightPage.searchFlightInput();
         flightPage.clickAllPDGFlight();
     }
 

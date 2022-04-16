@@ -15,13 +15,14 @@ public class FlightPage extends PageObject {
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"flight_searchform_button_search\"]")
     public WebElementFacade searchFlightBtn;
 
-    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.EditText")
+    @FindBy(id = "com.traveloka.android:id/edit_text_field")
     public WebElementFacade searchFlightBox;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]")
     public WebElementFacade allJakartaFlightOption;
 
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]")
+//    @FindBy(linkText = "Padang, Indonesia")
     public WebElementFacade allPadangFlightOption;
 
     public void enterFromFlight() {
@@ -40,7 +41,7 @@ public class FlightPage extends PageObject {
     }
 
     public void searchFlightInput() {
-        searchFlightBox.sendKeys("Padang");
+        typeInto(searchFlightBox,"Padang");
         waitABit(2000);
     }
 
@@ -51,6 +52,6 @@ public class FlightPage extends PageObject {
 
     public void clickSearchFlightBtn() {
         searchFlightBtn.click();
-        waitABit(3000);
+        waitABit(2000);
     }
 }
